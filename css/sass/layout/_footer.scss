@@ -4,6 +4,10 @@
     position: relative;
     overflow: hidden;
 
+    @include sm {
+        padding-top: 30px;
+    }
+
     .overlay-img {
         position: absolute;
         bottom: -100px;

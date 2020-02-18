@@ -112,7 +112,7 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(51, 51, 50, 0.98);
+  background-color: rgba(31, 31, 31, 0.99);
   z-index: 999;
   display: none;
 }
@@ -427,15 +427,15 @@ html[dir=ltr] .navbar-cont .close-btn {
 }
 @media (max-width: 767px) {
   .main-slider .owl-dots {
-    bottom: 5px;
+    bottom: 10px;
   }
 }
 .main-slider .owl-dots .owl-dot {
   background: rgba(0, 0, 0, 0.502);
   outline: none;
   border: none;
-  width: 11px;
-  height: 11px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   cursor: pointer;
   margin: 0 2.5px;
@@ -470,8 +470,8 @@ html[dir=ltr] .navbar-cont .close-btn {
   background: rgba(0, 0, 0, 0.502);
   outline: none;
   border: none;
-  width: 11px;
-  height: 11px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   cursor: pointer;
   margin: 0 2.5px;
@@ -586,8 +586,8 @@ html[dir=ltr] .navbar-cont .close-btn {
   background: rgba(0, 0, 0, 0.502);
   outline: none;
   border: none;
-  width: 11px;
-  height: 11px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   cursor: pointer;
   margin: 0 2.5px;
@@ -690,7 +690,6 @@ html[dir=ltr] .navbar-cont .close-btn {
   font-size: 14px;
   color: #fff;
   font-family: med;
-  border: 1px solid #b5cf35;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -704,8 +703,8 @@ html[dir=ltr] .navbar-cont .close-btn {
   font-size: 16px;
 }
 .product .mo-add-to-cart:hover {
-  color: #333332;
-  background-color: transparent;
+  color: #fff;
+  background-color: #869c1a;
 }
 .product .mo-sale-value {
   position: absolute;
@@ -728,11 +727,11 @@ html[dir=ltr] .product .mo-sale-value {
 }
 
 .brands-cont {
-  margin-top: 109px;
+  margin-top: 23px;
 }
 @media (max-width: 767px) {
   .brands-cont {
-    margin-top: 60px;
+    margin-top: 30px;
   }
 }
 
@@ -786,8 +785,8 @@ html[dir=ltr] .product .mo-sale-value {
   background: rgba(0, 0, 0, 0.502);
   outline: none;
   border: none;
-  width: 11px;
-  height: 11px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   cursor: pointer;
   margin: 0 2.5px;
@@ -826,6 +825,21 @@ html[dir=ltr] .product .mo-sale-value {
 
 .owl-item .item .brand img {
   width: auto;
+}
+
+.slider-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.slider-top .show-more {
+  font-family: "med";
+  font-size: 14px;
+  color: #b2b2b2;
+  transition: all 0.3s ease-in-out;
+}
+.slider-top .show-more:hover {
+  color: #b5cf35;
 }
 
 @media (max-width: 767px) {
@@ -984,7 +998,7 @@ html[dir=ltr] .lang {
 }
 @media (max-width: 991px) {
   .logo {
-    width: 150px;
+    width: 100px;
   }
 }
 .logo img {
@@ -1032,8 +1046,8 @@ html[dir=ltr] .mo-user-nav {
   transition: all 0.3s ease-in-out;
 }
 html[dir=ltr] .user-anchor {
-  margin-right: 24px;
-  margin-left: 0;
+  margin-left: 24px;
+  margin-right: 0;
 }
 html[dir=ltr] .user-anchor:first-of-type {
   margin-left: 0;
@@ -1200,7 +1214,7 @@ html[dir=ltr] .user-anchor:first-of-type {
 }
 @media (max-width: 767px) {
   .features {
-    padding: 25px;
+    padding: 40px;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -1236,6 +1250,7 @@ html[dir=ltr] .user-anchor:first-of-type {
 @media (max-width: 767px) {
   .features .feature span {
     margin: auto;
+    margin-bottom: 10px;
   }
 }
 
@@ -1254,6 +1269,11 @@ html[dir=ltr] .features .feature span {
   padding-top: 54px;
   position: relative;
   overflow: hidden;
+}
+@media (max-width: 991px) {
+  .footer {
+    padding-top: 30px;
+  }
 }
 .footer .overlay-img {
   position: absolute;
