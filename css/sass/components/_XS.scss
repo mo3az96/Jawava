@@ -1,0 +1,77 @@
+.navbar-cont {
+    .close-btn {
+        font-size: 20px;
+        color: $footer;
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        display: none;
+    }
+}
+
+.navbar-cont {
+    @include xs {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba($text, 0.4);
+        z-index: 99;
+
+
+        .mo-navbar {
+            background-color: #fff;
+            width: 280px;
+            flex-direction: column;
+            height: 100vh;
+            padding: 80px 25px 0;
+            align-items: flex-start;
+            justify-content: flex-start;
+            transform-origin: right;
+            transform: scaleX(0);
+            @include transition(all 0.5s ease-in-out);
+
+            &.nav-in {
+                transform: scaleX(1);
+            }
+        }
+
+        .close-btn {
+            display: flex;
+        }
+
+        .nav-li {
+            margin: 7px 0;
+        }
+
+        .nav-anchor {
+            color: $text;
+            font-family: med;
+
+            @include sm {
+                line-height: unset;
+            }
+        }
+    }
+
+}
+
+#{$ltr} {
+    .navbar-cont {
+        .close-btn {
+            right: 25px;
+            left: auto;
+        }
+    }
+
+    .navbar-cont {
+        @include xs {
+            .mo-navbar {
+                transform-origin: left;
+            }
+        }
+
+    }
+}

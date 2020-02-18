@@ -1,0 +1,186 @@
+.banners-cont {
+    margin-top: 29px;
+
+    @include sm {
+        margin-top: 15px;
+    }
+}
+
+.banner-cont {
+    margin-top: 60px;
+
+    @include sm {
+        margin-top: 30px;
+    }
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    @include sm {
+        margin-bottom: 15px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        backface-visibility: hidden;
+        @include transition(all 0.3s ease-in-out);
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(255, 255, 255, 0.5)));
+        background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5));
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    &:hover {
+        &:before {
+            -webkit-animation: shape 0.7s linear;
+            animation: shape 0.7s linear;
+        }
+    }
+}
+
+//////////////////////////////////////////////
+.sec-header {
+    font-size: 24px;
+    color: $text;
+    font-family: med;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+
+    &.cats-header {
+        text-align: center;
+
+        &:before {
+            content: url("../images/head-pat.png");
+        }
+    }
+
+    @include sm {
+        text-align: center;
+    }
+}
+
+////////////////////////
+.cats-cont {
+    margin-top: 75px;
+
+    @include sm {
+        margin-top: 40px;
+    }
+}
+
+///////////////////////////
+.bestseller {
+    background-color: #f7f7f7;
+    margin-top: 80px;
+    padding: 80px 0 75px;
+
+    @include sm {
+        margin-top: 40px;
+        padding: 40px 0 35px;
+    }
+}
+
+.specials {
+    margin-top: 75px;
+
+    @include sm {
+        margin-top: 40px;
+    }
+}
+
+.latest {
+    background-color: #f7f7f7;
+    margin-top: 80px;
+    padding: 80px 0 75px;
+
+    @include sm {
+        margin-top: 40px;
+        padding: 40px 0 35px;
+    }
+}
+
+//////////////////
+.features-cont {
+    background-color: #393938;
+    margin-top: 48px;
+}
+
+.features {
+    min-height: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 45px;
+
+    @include xs {
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .feature {
+        font-size: 15.68px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        cursor: default;
+        text-transform: capitalize;
+
+        @include xs {
+            margin: auto;
+            margin-bottom: 25px;
+            flex-direction: column;
+
+            &:last-of-type {
+                margin: auto;
+            }
+        }
+
+        span {
+            font-size: 23.52px;
+            color: $green;
+            margin-left: 8px;
+            backface-visibility: hidden;
+            @include transition(all 0.5s ease-in-out);
+
+            @include xs {
+                margin: auto;
+            }
+        }
+
+
+    }
+}
+
+#{$ltr} .features {
+    .feature {
+        span {
+            margin-left: 0;
+            margin-right: 8px;
+
+            @include xs {
+                margin: auto;
+            }
+        }
+
+    }
+}

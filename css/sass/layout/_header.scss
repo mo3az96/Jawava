@@ -1,0 +1,144 @@
+header {
+    padding-top: 15px;
+
+    @include sm {
+        padding-top: 10px;
+    }
+}
+
+.mo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.lang {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+    @include transition(all 0.3s ease-in-out);
+    color: #838382;
+    font-size: 13px;
+
+    #{$ltr} & {
+        left: auto;
+        right: 0;
+    }
+
+    .lang-text {
+        margin: 0 5px;
+    }
+
+    &:hover {
+        color: $green;
+    }
+
+    @include sm {
+        .lang-text {
+            display: none;
+        }
+
+        left: auto;
+        right: 10px;
+        top: 19px;
+        z-index: 99;
+        transform: scaleX(0);
+        transform-origin: right;
+
+        #{$ltr} & {
+            left: 10px;
+            right: auto;
+            transform-origin: left;
+        }
+
+        &.lang-in {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.logo {
+    width: 195px;
+    display: flex;
+    align-items: center;
+
+    @include sm {
+        width: 150px;
+    }
+
+    img {
+        @include transition(all 0.3s ease-in-out);
+    }
+}
+
+._2nd-sec {
+    display: flex;
+    align-items: center;
+}
+
+.mo-user-nav {
+    display: flex;
+    align-items: center;
+    margin-right: 37px;
+
+    #{$ltr} & {
+        margin-left: 37px;
+        margin-right: 0;
+
+        @include sm {
+            margin: 0;
+        }
+    }
+
+
+    @include sm {
+        margin: 0;
+    }
+}
+
+.user-anchor {
+    font-size: 22px;
+    color: $grey;
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include transition(all 0.3s ease-in-out);
+
+    #{$ltr} & {
+        margin-right: 24px;
+        margin-left: 0;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+
+        @include sm {
+            margin-right: 0;
+            margin-left: 15px;
+        }
+    }
+
+    &:first-of-type {
+        margin-right: 0;
+    }
+
+    &:hover {
+        color: $green;
+    }
+
+    @include sm {
+        margin-right: 15px;
+    }
+}
+
+.mo-menu-icon {
+    display: none;
+
+    @include sm {
+        display: flex;
+    }
+}
